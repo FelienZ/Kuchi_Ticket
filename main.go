@@ -14,6 +14,7 @@ func main() {
 		Handler: router,
 	}
 	router.HandleFunc("/tickets", handler.GetTickets)
+	router.HandleFunc("POST /ticket", handler.CreateTicket)
 	router.HandleFunc("/ticket/{id}", handler.GetTicketById)
 	fmt.Printf("Server Run at: http://%s", server.Addr)
 	err := server.ListenAndServe()
