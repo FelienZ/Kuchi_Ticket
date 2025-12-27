@@ -16,7 +16,7 @@ func main() {
 	router.HandleFunc("/tickets", handler.GetTickets)
 	router.HandleFunc("/ticket/{id}", handler.GetTicketById)
 	router.HandleFunc("POST /ticket", handler.CreateTicket)
-	router.HandleFunc("POST /ticket/{id}", handler.OrderTicket)
+	router.HandleFunc("POST /ticket/{id}/order", handler.OrderTicket)
 	fmt.Printf("Server Run at: http://%s", server.Addr)
 	err := server.ListenAndServe()
 	if err != nil {

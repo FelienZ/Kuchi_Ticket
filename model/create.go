@@ -1,6 +1,7 @@
 package model
 
 type Create struct {
-	Price, Stock int
-	Title        string
+	Price int    `json:"price"`
+	Stock int    `json:"stock"`
+	Title string `json:"title"`
 }
