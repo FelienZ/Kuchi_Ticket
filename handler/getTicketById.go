@@ -10,7 +10,6 @@ import (
 
 func GetTicketById(w http.ResponseWriter, r *http.Request) {
 	tickets := data.Tickets
-	w.WriteHeader(http.StatusOK)
 	w.Header().Set("Content-Type", "application/json")
 
 	// id := r.URL.Query().Get("id") //biasanya
@@ -21,6 +20,7 @@ func GetTicketById(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(map[string]string{
 			"error": "Masukkan Id dengan Benar",
 		})
+		return
 	}
 	for i := 0; i < len(tickets); i++ {
 		val, _ := strconv.Atoi(tickets[i].Id)
