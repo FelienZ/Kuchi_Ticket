@@ -3,9 +3,9 @@ package data
 import "Go_Ticket/model"
 
 //dummy atau inisialisasi Slice kosong
-var Tickets = []model.Ticket{
+var Events = []model.Event{
 	{
-		Id:    "1",
+		Id:    1,
 		Title: "Ticket A",
 		Price: 20000,
 		Stock: 4,
